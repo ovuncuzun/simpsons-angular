@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "simpsons-angular": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "simpsons-angular"
+    }
+  },
+  "defaultProject": "simpsons-angular",
+  "cli": {
+    "analytics": "e0488a9c-83b1-4d8b-8e32-032a9e6c1f5e"
+  }
 }
