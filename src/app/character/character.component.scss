@@ -1,0 +1,56 @@
+.characters {
+display: flex;
+flex-wrap: wrap;
+}
+
+.character {
+    flex: 0 0 calc(100% / 3 - 20px);
+    margin: 10px;
+    text-align: center;
+
+    .mat-card-header {
+        text-align: left;
+    }
+
+    .character-img {
+        text-align: center;
+        height: 300px;
+    }
+
+    img.mat-card-image {
+        width: 200px;
+        height: 100%;
+        margin: 0 auto;
+        object-fit: cover;
+        margin-bottom: 0;
+    }
+
+    .mat-card-actions {
+        text-align: center;
+    }
+}
+
+
+.fab {
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 4px 6px 6px #ccc;
+    border-radius: 20% 50%;
+    background-color: blue;
+    padding: 7px;
+    color:#fff;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+}
+@media only screen and (max-width: 960px) {
+    .character {
+        flex: 0 0 calc(100% / 2 - 20px);
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .character {
+        flex: 0 0 calc(100% - 20px);
+    }
+}

@@ -8,6 +8,7 @@ import {
   MatCardModule,
   MatGridListModule,
   MatIconModule,
+  MatInputModule,
 } from "@angular/material";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -24,9 +25,11 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    MatGridListModule,
     MatCardModule,
     MatButtonModule,
     MatIconModule,
+    MatInputModule,
     FormsModule,
     ReactiveFormsModule,
 

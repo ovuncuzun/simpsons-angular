@@ -1,5 +1,6 @@
-<div>
-    <mat-card [attr.data-id]="character._id" *ngFor="let character of searchResult$ | async; index as i">
+<div class="characters">
+    <mat-card class="character" [attr.data-id]="character._id"
+        *ngFor="let character of searchResult$ | async; index as i">
         <mat-card-header>
             <mat-card-title>{{ character.firstName }} {{ character.lastName }}</mat-card-title>
             <mat-card-subtitle>{{ character.age }}</mat-card-subtitle>
