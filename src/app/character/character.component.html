@@ -1,0 +1,27 @@
+<div>
+    <mat-card [attr.data-id]="character._id" *ngFor="let character of searchResult$ | async; index as i">
+        <mat-card-header>
+            <mat-card-title>{{ character.firstName }} {{ character.lastName }}</mat-card-title>
+            <mat-card-subtitle>{{ character.age }}</mat-card-subtitle>
+        </mat-card-header>
+        <div class="character-img">
+            <a routerLink="{{ character._id }}/phrases">
+                <img mat-card-image [src]="character.picture" [alt]="character.firstName" />
+            </a>
+        </div>
+
+        <mat-card-actions>
+            <button class="edit" mat-raised-button>
+                Edit
+            </button>
+
+            <button mat-raised-button color="warn" class="delete">
+                Delete
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
+<span class="fab">
+    <mat-icon aria-hidden="false" aria-label="add icon">add</mat-icon>
+</span>
