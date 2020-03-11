@@ -30,6 +30,13 @@ flex-wrap: wrap;
     }
 }
 
+.search-form {
+    max-width: 300px;
+  
+    .search-form__input {
+      width: 100%;
+    }
+}
 
 .fab {
     cursor: pointer;

@@ -1,3 +1,10 @@
+<form [formGroup]="searchForm" class="search-form">
+    <mat-form-field class="search-form__input">
+        <mat-label>Search</mat-label>
+        <input formControlName="search" matInput placeholder="search character" />
+    </mat-form-field>
+</form>
+
 <div class="characters">
     <mat-card class="character" [attr.data-id]="character._id"
         *ngFor="let character of searchResult$ | async; index as i">
@@ -16,7 +23,7 @@
                 Edit
             </button>
 
-            <button mat-raised-button color="warn" class="delete">
+            <button mat-raised-button color="warn" class="delete" (click)="deleteCharacter(character._id)">
                 Delete
             </button>
         </mat-card-actions>

@@ -6,9 +6,11 @@ import { CharacterService } from './character.service';
 import {
   MatButtonModule,
   MatCardModule,
+  MatFormFieldModule,
   MatGridListModule,
   MatIconModule,
   MatInputModule,
+  MatDialogModule
 } from "@angular/material";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -32,7 +34,8 @@ const routes: Routes = [
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-
+    MatFormFieldModule,
+    MatDialogModule
   ],
   providers: [CharacterService],
   exports: [CharacterComponent]
