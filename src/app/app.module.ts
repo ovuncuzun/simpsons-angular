@@ -26,4 +26,4 @@ import { PhraseModule } from "./phrase/phrase.module";
   bootstrap: [AppComponent],
   entryComponents: [Dialog]
 })
-export class AppModule { }
+export class AppModule {}
