@@ -19,7 +19,7 @@
         </div>
 
         <mat-card-actions>
-            <button class="edit" mat-raised-button>
+            <button class="edit" mat-raised-button (click)="openDialog(character)">
                 Edit
             </button>
 
@@ -30,6 +30,6 @@
     </mat-card>
 </div>
 
-<span class="fab">
+<span class="fab" (click)="openDialog()">
     <mat-icon aria-hidden="false" aria-label="add icon">add</mat-icon>
 </span>

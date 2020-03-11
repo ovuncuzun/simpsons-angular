@@ -1,18 +1,19 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { CharacterComponent } from './character.component';
-import { Routes, RouterModule } from '@angular/router';
-import { CharacterService } from './character.service';
+import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {
   MatButtonModule,
   MatCardModule,
+  MatDialogModule,
   MatFormFieldModule,
   MatGridListModule,
   MatIconModule,
-  MatInputModule,
-  MatDialogModule
+  MatInputModule
 } from "@angular/material";
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from "@angular/router";
+import { CharacterComponent } from "./character.component";
+import { CharacterService } from "./character.service";
+import { Dialog } from "./dialog/dialog.component";
 
 const routes: Routes = [
   {
@@ -21,20 +22,19 @@ const routes: Routes = [
   }
 ];
 
-
 @NgModule({
-  declarations: [CharacterComponent],
+  declarations: [CharacterComponent, Dialog],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
-    MatIconModule,
-    MatInputModule,
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
     MatDialogModule
   ],
   providers: [CharacterService],
