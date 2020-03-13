@@ -1,32 +1,31 @@
 <div mat-dialog-content>
-    <p>{{ data._id ? "Edit" : "Add" }} Character</p>
-    <form class="dialog" #dialogForm="ngForm">
-        <input type="hidden" [(ngModel)]="data._id" name="id" />
-        <mat-form-field class="dialog-input">
-            <mat-label>First Name</mat-label>
-            <input required matInput [(ngModel)]="data.firstName" name="firstName" />
-        </mat-form-field>
+  <p>{{ data._id ? "Edit" : "Add" }} Character</p>
+  <form class="dialog" [formGroup]="dialogForm">
+    <input type="hidden" formControlName="id" name="id" />
+    <mat-form-field class="dialog-input">
+      <mat-label>First Name</mat-label>
+      <input required matInput formControlName="firstName" name="firstName" />
+    </mat-form-field>
 
-        <mat-form-field class="dialog-input">
-            <mat-label>Last Name</mat-label>
-            <input required matInput [(ngModel)]="data.lastName" name="lastName" />
-        </mat-form-field>
+    <mat-form-field class="dialog-input">
+      <mat-label>Last Name</mat-label>
+      <input required matInput formControlName="lastName" name="lastName" />
+    </mat-form-field>
 
-        <mat-form-field class="dialog-input">
-            <mat-label>Age</mat-label>
-            <input required matInput type="number" [(ngModel)]="data.age" name="age" />
-        </mat-form-field>
+    <mat-form-field class="dialog-input">
+      <mat-label>Age</mat-label>
+      <input required matInput type="number" formControlName="age" name="age" />
+    </mat-form-field>
 
-        <mat-form-field class="dialog-input">
-            <mat-label>Picture</mat-label>
-            <input required type="url" matInput [(ngModel)]="data.picture" name="picture" />
-        </mat-form-field>
-    </form>
+    <mat-form-field class="dialog-input">
+      <mat-label>Picture</mat-label>
+      <input required type="url" matInput formControlName="picture" name="picture" />
+    </mat-form-field>
+  </form>
 </div>
 <div mat-dialog-actions>
-    <button mat-raised-button (click)="onNoClick()">Close</button>
-    <button [disabled]="!dialogForm.form.valid" mat-raised-button color="primary" [mat-dialog-close]="data"
-        cdkFocusInitial>
-        Save
-    </button>
+  <button mat-raised-button (click)="onNoClick()">Close</button>
+  <button [disabled]="!dialogForm.valid" mat-raised-button color="primary" [mat-dialog-close]="dialogForm.value" cdkFocusInitial>
+    Save
+  </button>
 </div>

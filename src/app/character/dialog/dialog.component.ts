@@ -10,17 +10,17 @@ import { Character } from '../character.model';
 })
 export class Dialog {
   dialogForm = new FormGroup({
-    id: new FormControl(""),
-    firstName: new FormControl(""),
-    lastName: new FormControl(""),
-    picture: new FormControl(""),
-    age: new FormControl("")
+    id: new FormControl(this.data._id),
+    firstName: new FormControl(this.data.firstName),
+    lastName: new FormControl(this.data.lastName),
+    picture: new FormControl(this.data.picture),
+    age: new FormControl(this.data.age)
   });
 
   constructor(
     public dialogRef: MatDialogRef<Dialog>,
     @Inject(MAT_DIALOG_DATA) public data?: Character
-  ) { }
+  ) {}
 
   onNoClick(): void {
     this.dialogRef.close();
